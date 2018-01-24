@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Temp_Convert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0 " textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jkE-Z5-Rzs">
+                                <rect key="frame" x="120" y="131" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="tmv-AD-aWI"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
+                                <connections>
+                                    <action selector="OutputCelsius:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="ycn-aH-zud"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="32 " textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HF7-YN-h60">
+                                <rect key="frame" x="120" y="41" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3Nm-Gc-Xab"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" keyboardAppearance="alert"/>
+                                <connections>
+                                    <action selector="OutputFarenheit:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Acj-jH-72M"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="℃" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYq-ST-JM3">
+                                <rect key="frame" x="208" y="46" width="20" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="℉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taN-e1-UdC">
+                                <rect key="frame" x="208" y="136" width="18" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90838366746902466" green="0.78488332033157349" blue="0.43749493360519409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bYq-ST-JM3" secondAttribute="trailing" constant="92" id="7P3-P5-Vlw"/>
+                            <constraint firstItem="jkE-Z5-Rzs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="985-Jx-CeY"/>
+                            <constraint firstItem="taN-e1-UdC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jkE-Z5-Rzs" secondAttribute="trailing" constant="8" symbolic="YES" id="AXT-as-Uve"/>
+                            <constraint firstItem="HF7-YN-h60" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="DSc-nr-eXv"/>
+                            <constraint firstItem="bYq-ST-JM3" firstAttribute="leading" secondItem="HF7-YN-h60" secondAttribute="trailing" constant="8" id="JUD-5t-i2A"/>
+                            <constraint firstItem="bYq-ST-JM3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="taN-e1-UdC" secondAttribute="leading" id="KpF-1Y-m2n"/>
+                            <constraint firstItem="jkE-Z5-Rzs" firstAttribute="top" secondItem="HF7-YN-h60" secondAttribute="bottom" constant="60" id="PCj-ji-OsB"/>
+                            <constraint firstItem="taN-e1-UdC" firstAttribute="top" secondItem="bYq-ST-JM3" secondAttribute="bottom" constant="69" id="Rkr-X9-bmC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HF7-YN-h60" secondAttribute="trailing" constant="120" id="d2T-5c-6Ve"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jkE-Z5-Rzs" secondAttribute="bottom" constant="319" id="dem-Lq-UGC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jkE-Z5-Rzs" secondAttribute="trailing" constant="120" id="j5U-fb-HyV"/>
+                            <constraint firstAttribute="trailing" secondItem="taN-e1-UdC" secondAttribute="trailing" constant="94" id="kcm-9v-sgQ"/>
+                            <constraint firstItem="bYq-ST-JM3" firstAttribute="centerY" secondItem="HF7-YN-h60" secondAttribute="centerY" id="vPh-kx-Hzs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="OutputCelsius" destination="jkE-Z5-Rzs" id="1mo-Qh-We2"/>
+                        <outlet property="OutputFarenheit" destination="HF7-YN-h60" id="v3x-yi-yre"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="133.69565217391306"/>
+        </scene>
+    </scenes>
+</document>
